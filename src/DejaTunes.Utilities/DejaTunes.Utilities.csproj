@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A673C07A-E7B7-4C70-918C-1BEE7B2C4AF0}</ProjectGuid>
+    <ProjectGuid>{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DejaTunes.Core</RootNamespace>
-    <AssemblyName>DejaTunes.Core</AssemblyName>
+    <RootNamespace>DejaTunes.Utilities</RootNamespace>
+    <AssemblyName>DejaTunes.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,15 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\SolutionInfo.cs">
       <Link>Properties\SolutionInfo.cs</Link>
     </Compile>
-    <Compile Include="Entities\FileWrapper.cs" />
-    <Compile Include="Entities\FolderWrapper.cs" />
-    <Compile Include="Services\IFileManagementService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

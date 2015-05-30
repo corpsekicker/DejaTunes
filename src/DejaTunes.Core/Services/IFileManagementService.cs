@@ -1,7 +1,9 @@
-﻿namespace DejaTunes.Core.Services
+﻿using System.Collections.Generic;
+
+namespace DejaTunes.Core.Services
 {
     public interface IFileManagementService
     {
-        void CollectFiles(string parentLocation);
+        List<File> CollectFiles(string parentLocation, bool searchRecursively);
     }
 }
