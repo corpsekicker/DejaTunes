@@ -3,18 +3,18 @@ using System.Reflection;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CyestMine Scheduler and Evaluation")]
-[assembly: AssemblyDescription("PlugIn class inheriting from Bentley.MicroStation.AddIn to allow MicroStation to find our available Plug-Ins")]
+[assembly: AssemblyTitle("DejaTunes")]
+[assembly: AssemblyDescription("Library for Core Services and Entities")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("The Cyest Corporation")]
-[assembly: AssemblyProduct("CyestMine Scheduler and Evaluation")]
-[assembly: AssemblyCopyright("Copyright © The Cyest Corporation 2015")]
+[assembly: AssemblyCompany("MJ4CK")]
+[assembly: AssemblyProduct("DejaTunes")]
+[assembly: AssemblyCopyright("MJ4CK")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Version information for an assembly consists of the following four values:
 //
-//      Major Version : App Version. For app-wide changes ("Bentley Scheduler 2").
+//      Major Version : App Version. For app-wide changes.
 //      Minor Version : Feature Release. Incremented when one or more features are released to market.
 //      Build Number : Bug fix Release. Incrememnted with every bug fix deployed to testing.
 //
@@ -22,8 +22,8 @@ using System.Reflection;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.3.57.3")]
 
-[assembly: AssemblyVersion("1.11.1.0")]
-[assembly: AssemblyFileVersion("1.11.1.0")]
+[assembly: AssemblyVersion("0.0.1.0")]
+[assembly: AssemblyFileVersion("0.0.1.0")]
 
 // In order to sign your assembly you must specify a key to use. Refer to the 
 // Microsoft .NET Framework documentation for more information on assembly signing.
