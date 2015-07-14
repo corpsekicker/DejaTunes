@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DejaTunes.Tests", "DejaTune
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DejaTunes.Utilities", "DejaTunes.Utilities\DejaTunes.Utilities.csproj", "{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DejaTunes.UI.WPF", "DejaTunes.UI.WPF\DejaTunes.UI.WPF.csproj", "{9978F10E-8458-4E50-9D21-DB4C2FD67F89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9978F10E-8458-4E50-9D21-DB4C2FD67F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9978F10E-8458-4E50-9D21-DB4C2FD67F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9978F10E-8458-4E50-9D21-DB4C2FD67F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9978F10E-8458-4E50-9D21-DB4C2FD67F89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
