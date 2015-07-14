@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DejaTunes.UI.WPF.Shell;
 
 namespace DejaTunes.UI.WPF
 {
@@ -20,10 +21,10 @@ namespace DejaTunes.UI.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public MainWindow(IShellViewModel context)
         {
-            MessageBox.Show("Main");
             InitializeComponent();
+            this.DataContext = context.GetModel();
         }
     }
 }
