@@ -38,16 +38,12 @@
             this.groupBoxSearchResults = new System.Windows.Forms.GroupBox();
             this.listBoxSearchResults = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Size = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateModified = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.buttonDeleteAll = new System.Windows.Forms.Button();
             this.buttonDeleteSelected = new System.Windows.Forms.Button();
+            this.listBoxDuplicates = new System.Windows.Forms.ListBox();
             this.groupBoxSearchResults.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
@@ -90,6 +86,7 @@
             this.buttonFolderBrowse.TabIndex = 3;
             this.buttonFolderBrowse.Text = "...";
             this.buttonFolderBrowse.UseVisualStyleBackColor = true;
+            this.buttonFolderBrowse.Click += new System.EventHandler(this.buttonFolderBrowse_Click);
             // 
             // checkBoxSearchSubFolders
             // 
@@ -121,6 +118,7 @@
             this.buttonSearchForDuplicates.TabIndex = 6;
             this.buttonSearchForDuplicates.Text = "Search for Duplicates";
             this.buttonSearchForDuplicates.UseVisualStyleBackColor = true;
+            this.buttonSearchForDuplicates.Click += new System.EventHandler(this.buttonSearchForDuplicates_Click);
             // 
             // groupBoxSearchResults
             // 
@@ -144,7 +142,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView);
+            this.groupBox1.Controls.Add(this.listBoxDuplicates);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
@@ -152,36 +150,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Duplicated Files";
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Location,
-            this.Size,
-            this.DateModified});
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(508, 210);
-            this.dataGridView.TabIndex = 0;
-            // 
-            // Location
-            // 
-            this.Location.HeaderText = "Location";
-            this.Location.Name = "Location";
-            this.Location.Width = 300;
-            // 
-            // Size
-            // 
-            this.Size.HeaderText = "Size";
-            this.Size.Name = "Size";
-            // 
-            // DateModified
-            // 
-            this.DateModified.HeaderText = "Date Modified";
-            this.DateModified.Name = "DateModified";
             // 
             // splitContainer
             // 
@@ -225,6 +193,16 @@
             this.buttonDeleteSelected.TabIndex = 8;
             this.buttonDeleteSelected.Text = "Delete Selected Duplicates";
             this.buttonDeleteSelected.UseVisualStyleBackColor = true;
+            this.buttonDeleteSelected.Click += new System.EventHandler(this.buttonDeleteSelected_Click);
+            // 
+            // listBoxDuplicates
+            // 
+            this.listBoxDuplicates.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxDuplicates.FormattingEnabled = true;
+            this.listBoxDuplicates.Location = new System.Drawing.Point(3, 16);
+            this.listBoxDuplicates.Name = "listBoxDuplicates";
+            this.listBoxDuplicates.Size = new System.Drawing.Size(508, 210);
+            this.listBoxDuplicates.TabIndex = 1;
             // 
             // Shell
             // 
@@ -246,7 +224,6 @@
             this.Text = "DejaTunes";
             this.groupBoxSearchResults.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.splitContainer.Panel1.ResumeLayout(false);
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
@@ -269,12 +246,9 @@
         private System.Windows.Forms.SplitContainer splitContainer;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox listBoxSearchResults;
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button buttonDeleteAll;
         private System.Windows.Forms.Button buttonDeleteSelected;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Location;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Size;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateModified;
+        private System.Windows.Forms.ListBox listBoxDuplicates;
     }
 }
 
