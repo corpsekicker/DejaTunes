@@ -9,16 +9,22 @@ namespace DejaTunes.Core.Services
     {
         public List<FileInfo> CollectFiles(string parentLocation, bool searchRecursively, string searchPattern)
         {
+            if (parentLocation.Contains(@"$"))
+            {
+                return new List<FileInfo>();
+            }
+
             string[] filePaths;
+            List<FileInfo> fileInfos;
             try
             {
                 filePaths = string.IsNullOrEmpty(searchPattern) ? Directory.GetFiles(parentLocation) : Directory.GetFiles(parentLocation, searchPattern);
+                fileInfos = filePaths.Select(filePath => new FileInfo(filePath)).ToList();
             }
             catch
             {
                 return new List<FileInfo>();
             }
-            var fileInfos = filePaths.Select(filePath => new FileInfo(filePath)).ToList();
 
             if (searchRecursively)
             {

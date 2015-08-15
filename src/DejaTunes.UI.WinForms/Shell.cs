@@ -15,6 +15,7 @@ namespace DejaTunes.UI.WinForms
         public Shell()
         {
             InitializeComponent();
+            this.statusStrip.Text = @"Ready";
             this.PopulateSearchMethods();
         }
 
@@ -54,9 +55,11 @@ namespace DejaTunes.UI.WinForms
 
             // Collect files at folder.
             this.UseWaitCursor = true;
+            this.statusStrip.Text = @"Busy";
             IFileManagementService fileManagementService = new FileManagementService();
             List<FileInfo> files = fileManagementService.CollectFiles(this.textBoxFolder.Text, this.checkBoxSearchSubFolders.Checked, textBoxSearchPattern.Text);
             this.UseWaitCursor = false;
+            this.statusStrip.Text = @"Ready";
 
             // Populate list box with files:
             this.listBoxSearchResults.Items.Clear();
@@ -86,6 +89,7 @@ namespace DejaTunes.UI.WinForms
 
             // TODO: Make progress bar
             this.UseWaitCursor = true;
+            this.statusStrip.Text = @"Busy";
             DeleteFiles(listBoxDuplicates.SelectedItems.Cast<object>().Select(x => x.ToString()));
         }
 
@@ -99,6 +103,7 @@ namespace DejaTunes.UI.WinForms
                 File.Delete(selectedDuplicate);
             }
             this.UseWaitCursor = false;
+            this.statusStrip.Text = @"Ready";
 
             // Show summary
             string size = GetFormattedSize(totalSize);

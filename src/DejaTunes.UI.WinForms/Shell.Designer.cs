@@ -45,12 +45,15 @@
             this.buttonOpenLocation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearchPattern = new System.Windows.Forms.TextBox();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBoxSearchResults.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
             this.splitContainer.Panel1.SuspendLayout();
             this.splitContainer.Panel2.SuspendLayout();
             this.splitContainer.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelStep1
@@ -84,6 +87,7 @@
             // 
             // checkBoxSearchSubFolders
             // 
+            this.checkBoxSearchSubFolders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxSearchSubFolders.AutoSize = true;
             this.checkBoxSearchSubFolders.Location = new System.Drawing.Point(210, 52);
             this.checkBoxSearchSubFolders.Name = "checkBoxSearchSubFolders";
@@ -110,7 +114,7 @@
             this.groupBoxSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxSearchResults.Location = new System.Drawing.Point(0, 0);
             this.groupBoxSearchResults.Name = "groupBoxSearchResults";
-            this.groupBoxSearchResults.Size = new System.Drawing.Size(602, 285);
+            this.groupBoxSearchResults.Size = new System.Drawing.Size(602, 270);
             this.groupBoxSearchResults.TabIndex = 7;
             this.groupBoxSearchResults.TabStop = false;
             this.groupBoxSearchResults.Text = "Search Results";
@@ -121,7 +125,7 @@
             this.listBoxSearchResults.FormattingEnabled = true;
             this.listBoxSearchResults.Location = new System.Drawing.Point(3, 16);
             this.listBoxSearchResults.Name = "listBoxSearchResults";
-            this.listBoxSearchResults.Size = new System.Drawing.Size(596, 266);
+            this.listBoxSearchResults.Size = new System.Drawing.Size(596, 251);
             this.listBoxSearchResults.TabIndex = 0;
             // 
             // groupBox1
@@ -130,7 +134,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(602, 265);
+            this.groupBox1.Size = new System.Drawing.Size(602, 252);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Duplicated Files";
@@ -142,7 +146,7 @@
             this.listBoxDuplicates.Location = new System.Drawing.Point(3, 16);
             this.listBoxDuplicates.Name = "listBoxDuplicates";
             this.listBoxDuplicates.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBoxDuplicates.Size = new System.Drawing.Size(596, 246);
+            this.listBoxDuplicates.Size = new System.Drawing.Size(596, 233);
             this.listBoxDuplicates.TabIndex = 1;
             // 
             // splitContainer
@@ -162,17 +166,17 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer.Size = new System.Drawing.Size(602, 554);
-            this.splitContainer.SplitterDistance = 285;
+            this.splitContainer.Size = new System.Drawing.Size(602, 526);
+            this.splitContainer.SplitterDistance = 270;
             this.splitContainer.TabIndex = 0;
             // 
             // buttonDeleteAll
             // 
             this.buttonDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteAll.Location = new System.Drawing.Point(401, 664);
+            this.buttonDeleteAll.Location = new System.Drawing.Point(379, 3);
             this.buttonDeleteAll.Name = "buttonDeleteAll";
-            this.buttonDeleteAll.Size = new System.Drawing.Size(213, 23);
+            this.buttonDeleteAll.Size = new System.Drawing.Size(220, 23);
             this.buttonDeleteAll.TabIndex = 7;
             this.buttonDeleteAll.Text = "Delete All Duplicates";
             this.buttonDeleteAll.UseVisualStyleBackColor = true;
@@ -182,9 +186,9 @@
             // 
             this.buttonDeleteSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteSelected.Location = new System.Drawing.Point(206, 664);
+            this.buttonDeleteSelected.Location = new System.Drawing.Point(192, 3);
             this.buttonDeleteSelected.Name = "buttonDeleteSelected";
-            this.buttonDeleteSelected.Size = new System.Drawing.Size(189, 23);
+            this.buttonDeleteSelected.Size = new System.Drawing.Size(184, 23);
             this.buttonDeleteSelected.TabIndex = 8;
             this.buttonDeleteSelected.Text = "Delete Selected Duplicates";
             this.buttonDeleteSelected.UseVisualStyleBackColor = true;
@@ -201,6 +205,7 @@
             // 
             // comboBoxSearchMethod
             // 
+            this.comboBoxSearchMethod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxSearchMethod.FormattingEnabled = true;
             this.comboBoxSearchMethod.Location = new System.Drawing.Point(438, 50);
             this.comboBoxSearchMethod.Name = "comboBoxSearchMethod";
@@ -211,9 +216,9 @@
             // 
             this.buttonOpenLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOpenLocation.Location = new System.Drawing.Point(18, 664);
+            this.buttonOpenLocation.Location = new System.Drawing.Point(0, 3);
             this.buttonOpenLocation.Name = "buttonOpenLocation";
-            this.buttonOpenLocation.Size = new System.Drawing.Size(182, 23);
+            this.buttonOpenLocation.Size = new System.Drawing.Size(189, 23);
             this.buttonOpenLocation.TabIndex = 11;
             this.buttonOpenLocation.Text = "Open Location";
             this.buttonOpenLocation.UseVisualStyleBackColor = true;
@@ -237,25 +242,41 @@
             this.textBoxSearchPattern.Size = new System.Drawing.Size(102, 20);
             this.textBoxSearchPattern.TabIndex = 13;
             // 
+            // statusStrip
+            // 
+            this.statusStrip.Location = new System.Drawing.Point(0, 673);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(629, 22);
+            this.statusStrip.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.buttonOpenLocation);
+            this.panel1.Controls.Add(this.buttonDeleteSelected);
+            this.panel1.Controls.Add(this.buttonDeleteAll);
+            this.panel1.Location = new System.Drawing.Point(15, 636);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(602, 34);
+            this.panel1.TabIndex = 15;
+            // 
             // Shell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 695);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBoxSearchPattern);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonOpenLocation);
             this.Controls.Add(this.comboBoxSearchMethod);
             this.Controls.Add(this.labelComboBoxSearchMethod);
-            this.Controls.Add(this.buttonDeleteSelected);
-            this.Controls.Add(this.buttonDeleteAll);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.buttonSearchForDuplicates);
             this.Controls.Add(this.checkBoxSearchSubFolders);
             this.Controls.Add(this.buttonFolderBrowse);
             this.Controls.Add(this.textBoxFolder);
             this.Controls.Add(this.labelStep1);
-            this.MinimumSize = new System.Drawing.Size(557, 597);
+            this.Controls.Add(this.statusStrip);
+            this.MinimumSize = new System.Drawing.Size(645, 733);
             this.Name = "Shell";
             this.Text = "DejaTunes";
             this.groupBoxSearchResults.ResumeLayout(false);
@@ -264,6 +285,7 @@
             this.splitContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).EndInit();
             this.splitContainer.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,6 +310,8 @@
         private System.Windows.Forms.Button buttonOpenLocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearchPattern;
+        private System.Windows.Forms.StatusStrip statusStrip;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
