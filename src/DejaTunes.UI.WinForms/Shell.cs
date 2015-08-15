@@ -125,7 +125,7 @@ namespace DejaTunes.UI.WinForms
 
             if (totalSize < 1024 * 1024 * 1024)
             {
-                return $"{ (totalSize / 1024)} Megabytes";
+                return $"{ (totalSize / 1024 / 1024)} Megabytes";
             }
 
             throw new InvalidOperationException($"{totalSize} is too small.");
