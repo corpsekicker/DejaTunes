@@ -84,6 +84,10 @@
       <Project>{A673C07A-E7B7-4C70-918C-1BEE7B2C4AF0}</Project>
       <Name>DejaTunes.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DejaTunes.Utilities\DejaTunes.Utilities.csproj">
+      <Project>{BA69D7F7-4DF3-404E-A5CD-FCD4B745F5D3}</Project>
+      <Name>DejaTunes.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

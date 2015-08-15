@@ -5,8 +5,8 @@ namespace DejaTunes.Core.Services
 {
     public interface IFileManagementService
     {
-        List<FileInfo> CollectFiles(string parentLocation, bool searchRecursively);
+        List<FileInfo> CollectFiles(string parentLocation, bool searchRecursively, string searchPattern);
 
-        List<FileInfo> FindDuplicates(List<FileInfo> files, bool byFileSize);
+        List<FileInfo> FindDuplicates(List<FileInfo> files, DuplicateSearchMethod duplicateSearchMethod);
     }
 }

@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.labelStep1 = new System.Windows.Forms.Label();
-            this.labelStep2 = new System.Windows.Forms.Label();
             this.textBoxFolder = new System.Windows.Forms.TextBox();
             this.buttonFolderBrowse = new System.Windows.Forms.Button();
             this.checkBoxSearchSubFolders = new System.Windows.Forms.CheckBox();
-            this.checkBoxFindDuplicatesBySize = new System.Windows.Forms.CheckBox();
             this.buttonSearchForDuplicates = new System.Windows.Forms.Button();
             this.groupBoxSearchResults = new System.Windows.Forms.GroupBox();
             this.listBoxSearchResults = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBoxDuplicates = new System.Windows.Forms.ListBox();
             this.splitContainer = new System.Windows.Forms.SplitContainer();
             this.buttonDeleteAll = new System.Windows.Forms.Button();
             this.buttonDeleteSelected = new System.Windows.Forms.Button();
-            this.listBoxDuplicates = new System.Windows.Forms.ListBox();
+            this.labelComboBoxSearchMethod = new System.Windows.Forms.Label();
+            this.comboBoxSearchMethod = new System.Windows.Forms.ComboBox();
+            this.buttonOpenLocation = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxSearchPattern = new System.Windows.Forms.TextBox();
             this.groupBoxSearchResults.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer)).BeginInit();
@@ -55,32 +58,23 @@
             this.labelStep1.AutoSize = true;
             this.labelStep1.Location = new System.Drawing.Point(12, 25);
             this.labelStep1.Name = "labelStep1";
-            this.labelStep1.Size = new System.Drawing.Size(41, 13);
+            this.labelStep1.Size = new System.Drawing.Size(69, 13);
             this.labelStep1.TabIndex = 0;
-            this.labelStep1.Text = "Step 1:";
-            // 
-            // labelStep2
-            // 
-            this.labelStep2.AutoSize = true;
-            this.labelStep2.Location = new System.Drawing.Point(12, 53);
-            this.labelStep2.Name = "labelStep2";
-            this.labelStep2.Size = new System.Drawing.Size(41, 13);
-            this.labelStep2.TabIndex = 1;
-            this.labelStep2.Text = "Step 2:";
+            this.labelStep1.Text = "Search Path:";
             // 
             // textBoxFolder
             // 
             this.textBoxFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxFolder.Location = new System.Drawing.Point(59, 22);
+            this.textBoxFolder.Location = new System.Drawing.Point(99, 22);
             this.textBoxFolder.Name = "textBoxFolder";
-            this.textBoxFolder.Size = new System.Drawing.Size(435, 20);
+            this.textBoxFolder.Size = new System.Drawing.Size(483, 20);
             this.textBoxFolder.TabIndex = 2;
             // 
             // buttonFolderBrowse
             // 
             this.buttonFolderBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonFolderBrowse.Location = new System.Drawing.Point(500, 20);
+            this.buttonFolderBrowse.Location = new System.Drawing.Point(588, 20);
             this.buttonFolderBrowse.Name = "buttonFolderBrowse";
             this.buttonFolderBrowse.Size = new System.Drawing.Size(29, 23);
             this.buttonFolderBrowse.TabIndex = 3;
@@ -91,22 +85,12 @@
             // checkBoxSearchSubFolders
             // 
             this.checkBoxSearchSubFolders.AutoSize = true;
-            this.checkBoxSearchSubFolders.Location = new System.Drawing.Point(59, 52);
+            this.checkBoxSearchSubFolders.Location = new System.Drawing.Point(210, 52);
             this.checkBoxSearchSubFolders.Name = "checkBoxSearchSubFolders";
             this.checkBoxSearchSubFolders.Size = new System.Drawing.Size(114, 17);
             this.checkBoxSearchSubFolders.TabIndex = 4;
             this.checkBoxSearchSubFolders.Text = "Search sub-folders";
             this.checkBoxSearchSubFolders.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxFindDuplicatesBySize
-            // 
-            this.checkBoxFindDuplicatesBySize.AutoSize = true;
-            this.checkBoxFindDuplicatesBySize.Location = new System.Drawing.Point(179, 52);
-            this.checkBoxFindDuplicatesBySize.Name = "checkBoxFindDuplicatesBySize";
-            this.checkBoxFindDuplicatesBySize.Size = new System.Drawing.Size(150, 17);
-            this.checkBoxFindDuplicatesBySize.TabIndex = 5;
-            this.checkBoxFindDuplicatesBySize.Text = "Find Duplicates by file size";
-            this.checkBoxFindDuplicatesBySize.UseVisualStyleBackColor = true;
             // 
             // buttonSearchForDuplicates
             // 
@@ -114,7 +98,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSearchForDuplicates.Location = new System.Drawing.Point(15, 75);
             this.buttonSearchForDuplicates.Name = "buttonSearchForDuplicates";
-            this.buttonSearchForDuplicates.Size = new System.Drawing.Size(514, 23);
+            this.buttonSearchForDuplicates.Size = new System.Drawing.Size(602, 23);
             this.buttonSearchForDuplicates.TabIndex = 6;
             this.buttonSearchForDuplicates.Text = "Search for Duplicates";
             this.buttonSearchForDuplicates.UseVisualStyleBackColor = true;
@@ -126,7 +110,7 @@
             this.groupBoxSearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxSearchResults.Location = new System.Drawing.Point(0, 0);
             this.groupBoxSearchResults.Name = "groupBoxSearchResults";
-            this.groupBoxSearchResults.Size = new System.Drawing.Size(514, 248);
+            this.groupBoxSearchResults.Size = new System.Drawing.Size(602, 285);
             this.groupBoxSearchResults.TabIndex = 7;
             this.groupBoxSearchResults.TabStop = false;
             this.groupBoxSearchResults.Text = "Search Results";
@@ -137,7 +121,7 @@
             this.listBoxSearchResults.FormattingEnabled = true;
             this.listBoxSearchResults.Location = new System.Drawing.Point(3, 16);
             this.listBoxSearchResults.Name = "listBoxSearchResults";
-            this.listBoxSearchResults.Size = new System.Drawing.Size(508, 229);
+            this.listBoxSearchResults.Size = new System.Drawing.Size(596, 266);
             this.listBoxSearchResults.TabIndex = 0;
             // 
             // groupBox1
@@ -146,10 +130,20 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 229);
+            this.groupBox1.Size = new System.Drawing.Size(602, 265);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Duplicated Files";
+            // 
+            // listBoxDuplicates
+            // 
+            this.listBoxDuplicates.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxDuplicates.FormattingEnabled = true;
+            this.listBoxDuplicates.Location = new System.Drawing.Point(3, 16);
+            this.listBoxDuplicates.Name = "listBoxDuplicates";
+            this.listBoxDuplicates.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.listBoxDuplicates.Size = new System.Drawing.Size(596, 246);
+            this.listBoxDuplicates.TabIndex = 1;
             // 
             // splitContainer
             // 
@@ -168,56 +162,98 @@
             // splitContainer.Panel2
             // 
             this.splitContainer.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer.Size = new System.Drawing.Size(514, 481);
-            this.splitContainer.SplitterDistance = 248;
+            this.splitContainer.Size = new System.Drawing.Size(602, 554);
+            this.splitContainer.SplitterDistance = 285;
             this.splitContainer.TabIndex = 0;
             // 
             // buttonDeleteAll
             // 
             this.buttonDeleteAll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteAll.Location = new System.Drawing.Point(267, 591);
+            this.buttonDeleteAll.Location = new System.Drawing.Point(401, 664);
             this.buttonDeleteAll.Name = "buttonDeleteAll";
-            this.buttonDeleteAll.Size = new System.Drawing.Size(259, 23);
+            this.buttonDeleteAll.Size = new System.Drawing.Size(213, 23);
             this.buttonDeleteAll.TabIndex = 7;
             this.buttonDeleteAll.Text = "Delete All Duplicates";
             this.buttonDeleteAll.UseVisualStyleBackColor = true;
+            this.buttonDeleteAll.Click += new System.EventHandler(this.buttonDeleteAll_Click);
             // 
             // buttonDeleteSelected
             // 
             this.buttonDeleteSelected.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDeleteSelected.Location = new System.Drawing.Point(15, 591);
+            this.buttonDeleteSelected.Location = new System.Drawing.Point(206, 664);
             this.buttonDeleteSelected.Name = "buttonDeleteSelected";
-            this.buttonDeleteSelected.Size = new System.Drawing.Size(246, 23);
+            this.buttonDeleteSelected.Size = new System.Drawing.Size(189, 23);
             this.buttonDeleteSelected.TabIndex = 8;
             this.buttonDeleteSelected.Text = "Delete Selected Duplicates";
             this.buttonDeleteSelected.UseVisualStyleBackColor = true;
             this.buttonDeleteSelected.Click += new System.EventHandler(this.buttonDeleteSelected_Click);
             // 
-            // listBoxDuplicates
+            // labelComboBoxSearchMethod
             // 
-            this.listBoxDuplicates.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxDuplicates.FormattingEnabled = true;
-            this.listBoxDuplicates.Location = new System.Drawing.Point(3, 16);
-            this.listBoxDuplicates.Name = "listBoxDuplicates";
-            this.listBoxDuplicates.Size = new System.Drawing.Size(508, 210);
-            this.listBoxDuplicates.TabIndex = 1;
+            this.labelComboBoxSearchMethod.AutoSize = true;
+            this.labelComboBoxSearchMethod.Location = new System.Drawing.Point(330, 53);
+            this.labelComboBoxSearchMethod.Name = "labelComboBoxSearchMethod";
+            this.labelComboBoxSearchMethod.Size = new System.Drawing.Size(102, 13);
+            this.labelComboBoxSearchMethod.TabIndex = 9;
+            this.labelComboBoxSearchMethod.Text = "Duplication Method:";
+            // 
+            // comboBoxSearchMethod
+            // 
+            this.comboBoxSearchMethod.FormattingEnabled = true;
+            this.comboBoxSearchMethod.Location = new System.Drawing.Point(438, 50);
+            this.comboBoxSearchMethod.Name = "comboBoxSearchMethod";
+            this.comboBoxSearchMethod.Size = new System.Drawing.Size(179, 21);
+            this.comboBoxSearchMethod.TabIndex = 10;
+            // 
+            // buttonOpenLocation
+            // 
+            this.buttonOpenLocation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOpenLocation.Location = new System.Drawing.Point(18, 664);
+            this.buttonOpenLocation.Name = "buttonOpenLocation";
+            this.buttonOpenLocation.Size = new System.Drawing.Size(182, 23);
+            this.buttonOpenLocation.TabIndex = 11;
+            this.buttonOpenLocation.Text = "Open Location";
+            this.buttonOpenLocation.UseVisualStyleBackColor = true;
+            this.buttonOpenLocation.Click += new System.EventHandler(this.buttonOpenLocation_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Search Pattern:";
+            // 
+            // textBoxSearchPattern
+            // 
+            this.textBoxSearchPattern.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearchPattern.Location = new System.Drawing.Point(99, 50);
+            this.textBoxSearchPattern.Name = "textBoxSearchPattern";
+            this.textBoxSearchPattern.Size = new System.Drawing.Size(102, 20);
+            this.textBoxSearchPattern.TabIndex = 13;
             // 
             // Shell
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 622);
+            this.ClientSize = new System.Drawing.Size(629, 695);
+            this.Controls.Add(this.textBoxSearchPattern);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonOpenLocation);
+            this.Controls.Add(this.comboBoxSearchMethod);
+            this.Controls.Add(this.labelComboBoxSearchMethod);
             this.Controls.Add(this.buttonDeleteSelected);
             this.Controls.Add(this.buttonDeleteAll);
             this.Controls.Add(this.splitContainer);
             this.Controls.Add(this.buttonSearchForDuplicates);
-            this.Controls.Add(this.checkBoxFindDuplicatesBySize);
             this.Controls.Add(this.checkBoxSearchSubFolders);
             this.Controls.Add(this.buttonFolderBrowse);
             this.Controls.Add(this.textBoxFolder);
-            this.Controls.Add(this.labelStep2);
             this.Controls.Add(this.labelStep1);
             this.MinimumSize = new System.Drawing.Size(557, 597);
             this.Name = "Shell";
@@ -236,11 +272,9 @@
         #endregion
 
         private System.Windows.Forms.Label labelStep1;
-        private System.Windows.Forms.Label labelStep2;
         private System.Windows.Forms.TextBox textBoxFolder;
         private System.Windows.Forms.Button buttonFolderBrowse;
         private System.Windows.Forms.CheckBox checkBoxSearchSubFolders;
-        private System.Windows.Forms.CheckBox checkBoxFindDuplicatesBySize;
         private System.Windows.Forms.Button buttonSearchForDuplicates;
         private System.Windows.Forms.GroupBox groupBoxSearchResults;
         private System.Windows.Forms.SplitContainer splitContainer;
@@ -249,6 +283,11 @@
         private System.Windows.Forms.Button buttonDeleteAll;
         private System.Windows.Forms.Button buttonDeleteSelected;
         private System.Windows.Forms.ListBox listBoxDuplicates;
+        private System.Windows.Forms.Label labelComboBoxSearchMethod;
+        private System.Windows.Forms.ComboBox comboBoxSearchMethod;
+        private System.Windows.Forms.Button buttonOpenLocation;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxSearchPattern;
     }
 }
 
