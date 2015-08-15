@@ -1,0 +1,12 @@
+1) Display details of all duplicated files in a given folder, recursively or not. 
+   (A duplicated file is characterised by having the same file name and filze size as another file)
+	1.1) Name
+	1.2) Location
+	1.3) Size
+	1.4) Date Modified
+2) Open folder location of displayed duplicated files.
+3) Order displayed duplicated files by details. (1)
+4) Select displayed duplicated files.
+4) Delete displayed selected duplicated files.
+5) Delete all displayed duplicates. (File with largest size will be retained)
+6) Clear displayed duplicates and search results.

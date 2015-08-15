@@ -1,0 +1,72 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1566" measuredH="516" mockupW="1141" mockupH="415">
+  <controls>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::TitleWindow" x="425" y="101" w="1018" h="415" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bottomheight>0</bottomheight>
+        <close>true</close>
+        <text>DejaTunes</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="1394" y="136" w="-1" h="-1" measuredW="34" measuredH="27" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>...</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextArea" x="488" y="136" w="906" h="26" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>c%3A%5Cshare%5Cmusic</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Button" x="440" y="189" w="988" h="27" measuredW="109" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Add%20Duplicates</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="440" y="139" w="-1" h="-1" measuredW="48" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Step%201%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="440" y="168" w="-1" h="-1" measuredW="51" measuredH="21" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Step%202%3A</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::CheckBox" x="488" y="167" w="144" h="22" measuredW="136" measuredH="22" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Search%20Sub-folders</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::FieldSet" x="440" y="223" w="988" h="118" measuredW="200" measuredH="170" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Search%20Results</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::FieldSet" x="440" y="341" w="988" h="160" measuredW="200" measuredH="170" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Duplicated%20Files</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::List" x="448" y="238" w="972" h="88" measuredW="100" measuredH="126" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <selectedIndex>0</selectedIndex>
+        <text>c%3A%5Cshare%5Cmusic%5CTrack%201.mp3%0Ac%3A%5Cshare%5Cmusic%5CKaty%20Perry%20-%20Dark%20Horse.mp3%0Ac%3A%5Cshare%5Cmusic%5CMj%20Music%5CRandom%20Song%20from%202006.mp3</text>
+        <verticalScrollbar>false</verticalScrollbar>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::DataGrid" x="448" y="358" w="972" h="137" measuredW="560" measuredH="113" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>none</borderStyle>
+        <text>Location%20%5Ev%2C%20Size%20v%2C%20Date%20Modified%0Ac%3A%5Cshare%5Cmusic%5CTrack1.mp3%2C%204%20MB%2C%202014-05-30%2006%3A15%20PM%0Ac%3A%5Cshare%5Cmusic%5CMj%20Music%5CSweet%20Jams%20from%202007%5CTrack1.mp3%2C%204%20MB%2C%202014-05-30%2006%3A15%20PM%0Ac%3A%5Cshare%5Cmusic%5CiTunes%20Library%5CTrack1.mp3%2C%204%20MB%2C%202010-12-01%2009%3A22%20AM%0A%7B65L%2C%200R%2C%200C%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="16" controlTypeID="com.balsamiq.mockups::CheckBox" x="626" y="167" w="940" h="22" measuredW="172" measuredH="22" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <state>selected</state>
+        <text>Find%20duplicates%20by%20file%20size</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
